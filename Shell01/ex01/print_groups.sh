@@ -1,2 +1,2 @@
 #!/bin/bash
-id -Gn $FT_USER | sed 's / /,/'
+groups $FT_USER | tr ' ' ',' 

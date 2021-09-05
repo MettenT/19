@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f | sed 's/.*\///'  | sed 's/\.sh//' 
+find . -type f -name '*.sh' | sed 's/.*\///'  | sed 's/\.sh//' 
