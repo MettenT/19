@@ -12,18 +12,17 @@
 
 #include <unistd.h>
 
-void ft_putint (char a)
+void	ft_putint (char a)
 {
 	write(1, &a, 1);
 }
 
-void ft_putnbr(int nb)
+void	ft_putnbr(int nb)
 {
-	char a = nb;
-	ft_putint(a);
+
 }
 
-int main()
+int	main()
 {
 	ft_putnbr(5);
 }
