@@ -22,7 +22,7 @@ void ft_putint(int a, int b, int c, int d)
 	write(1, ",", 1);
 }
 
-void ft_print_comb2() 
+void ft_print_comb2(void) 
 {
 	int e = 0;
 	int f;
