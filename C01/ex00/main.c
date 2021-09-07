@@ -1,6 +1,6 @@
 int	main(void)
 {
-	int i = 21;
+	int i = 15;
 	int *nbr = &i;
 
 	ft_ft(nbr);

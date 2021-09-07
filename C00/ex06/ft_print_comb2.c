@@ -12,7 +12,7 @@
 
 #include <unistd.h>
 
-void ft_putint(int a, int b, int c, int d)
+void	ft_putint(int a, int b, int c, int d)
 {
 	write(1, &a, 1);
 	write(1, &b, 1);
@@ -22,44 +22,42 @@ void ft_putint(int a, int b, int c, int d)
 	write(1, ",", 1);
 }
 
-void ft_print_comb2(void) 
+void	ft_mod(int e, int f)
 {
-	int e = 0;
-	int f;
+	int	a;
+	int	b;
+	int	c;
+	int	d;
 
-	while(e <= 98)
+	a = 0;
+	b = e % 10;
+	c = 0;
+	d = f % 10;
+	if (e > 9)
 	{
-		f = e + 1;
-		while( f <= 99)
-		{	
-			int a = 0;
-			int b = e % 10;
-			int c = 0;
-			int d = f % 10;
-
-			if(e > 9)
-			{
-				a = (e - b)/10;
-			}			
-			
-			if(f > 9)
-			{
-				c = (f - d)/10;
-			}
-			
-			a+= 48;
-			b+= 48;
-			c+= 48;
-			d+= 48;
-											
-			ft_putint(a, b, c, d);
-			f++;
-		}
-	e++;
+		a = (e - b) / 10;
 	}
+	if (f > 9)
+	{
+		c = (f - d) / 10;
+	}
+	ft_putint(a + 48, b + 48, c + 48, d + 48);
 }
 
-int main()
+void	ft_print_comb2(void)
 {
-	ft_print_comb2();
+	int	e;
+	int	f;
+
+	e = 0;
+	while (e <= 98)
+	{
+		f = e + 1;
+		while (f <= 99)
+		{	
+			ft_mod(e, f);
+			f++;
+		}
+		e++;
+	}
 }

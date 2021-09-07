@@ -12,9 +12,9 @@
 
 #include <unistd.h>
 
-void ft_is_negative(int i)
+void	ft_is_negative(int i)
 {
-	if(i >= 0)
+	if (i >= 0)
 	{
 		write(1, "P", 1);
 	}

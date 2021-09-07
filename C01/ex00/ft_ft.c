@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tmetten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/07 11:46:05 by marvin            #+#    #+#             */
-/*   Updated: 2021/09/07 11:46:05 by marvin           ###   ########.fr       */
+/*   Created: 2021/09/07 13:37:37 by tmetten           #+#    #+#             */
+/*   Updated: 2021/09/07 13:37:38 by tmetten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-void ft_ft(int *nbr)
+void	ft_ft(int *nbr)
 {
 	*nbr = 42;
 }
-

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tmetten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/07 12:21:58 by marvin            #+#    #+#             */
-/*   Updated: 2021/09/07 12:21:58 by marvin           ###   ########.fr       */
+/*   Created: 2021/09/07 13:40:40 by tmetten           #+#    #+#             */
+/*   Updated: 2021/09/07 13:40:42 by tmetten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-void ft_ultimate_ft(int *********nbr)
+void	ft_ultimate_ft(int *********nbr)
 {
-    *********nbr = 42;
+	*********nbr = 42;
 }

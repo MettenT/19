@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tmetten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/07 13:06:13 by marvin            #+#    #+#             */
-/*   Updated: 2021/09/07 13:06:13 by marvin           ###   ########.fr       */
+/*   Created: 2021/09/07 14:10:57 by tmetten           #+#    #+#             */
+/*   Updated: 2021/09/07 14:11:00 by tmetten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-void ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-   if (b != 0)
-   {
-       *div = a / b;
-       *mod = a % b;
-   }
-}  
+	if (b != 0)
+	{
+		*div = a / b;
+		*mod = a % b;
+	}
+}

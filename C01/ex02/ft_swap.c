@@ -3,21 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tmetten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/07 12:27:48 by marvin            #+#    #+#             */
-/*   Updated: 2021/09/07 12:27:48 by marvin           ###   ########.fr       */
+/*   Created: 2021/09/07 13:53:09 by tmetten           #+#    #+#             */
+/*   Updated: 2021/09/07 13:53:11 by tmetten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include <stdio.h>
+#include <unistd.h>
 
- void ft_swap(int *a, int *b)
- {
-     int swap = *a;
+void	ft_swap(int *a, int *b)
+{	
+	int	swap;
 
-     *a = *b;
-     *b = swap;
- }
-
- 
+	swap = *a;
+	*a = *b;
+	*b = swap;
+}

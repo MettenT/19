@@ -3,22 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tmetten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/07 13:21:32 by marvin            #+#    #+#             */
-/*   Updated: 2021/09/07 13:21:32 by marvin           ###   ########.fr       */
+/*   Created: 2021/09/07 14:12:47 by tmetten           #+#    #+#             */
+/*   Updated: 2021/09/07 14:12:49 by tmetten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-void ft_ultimate_div_mod(int *a, int *b)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-    if (*b != 0)
-    {
-        int mod = *a;
+	int	mod;
 
-        *a /= *b;
-        *b = mod % *b;
-    }
+	mod = *a;
+	if (*b != 0)
+	{
+		*a /= *b;
+		*b = mod % *b;
+	}
 }

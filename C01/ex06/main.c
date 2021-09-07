@@ -1,6 +1,6 @@
 int		main (void)
 {
-	char str[] = "Amanda";
+	char str[] = "Testing";
 
 	int count = ft_strlen(str);
 	
