@@ -10,9 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-void	ft_rev_int_tab()
+void	ft_rev_int_tab(int *tab, int size)
 {
-	
+	int	swap;
+	int	i;
+	int	n;
+
+	i = 0;
+	n = size - 1;
+	while (i <= n)
+	{
+		swap = tab[i];
+		tab[i] = tab[n];
+		tab[n] = swap;
+		i++;	
+		n--;	
+	}
 }
