@@ -3,35 +3,62 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ygunay <ygunay@student.s19.be>             +#+  +:+       +#+        */
+/*   By: hbourgeo <hbourgeo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/09 20:34:24 by ygunay            #+#    #+#             */
-/*   Updated: 2021/09/09 20:34:41 by ygunay           ###   ########.fr       */
+/*   Created: 2021/09/11 16:25:27 by hbourgeo          #+#    #+#             */
+/*   Updated: 2021/09/11 16:25:27 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
+
+void ft_putchar (char c)
+{
+	write(1, &c, 1);
+}
+
+void ft_putnbr (int nbr)
+{
+	if (nbr < 0)
+	{
+		nbr = -nbr;
+		ft_putchar('-');
+	}
+
+	if (nbr > 9)
+	{
+		ft_putnbr(nbr / 10);
+		ft_putnbr(nbr % 10);
+	}
+	else 
+	{
+		ft_putchar(nbr + '0');
+	}
+}
 
 void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int	temp;
+	int		c;
+	int		d;
 
-	temp = *a;
-	*a = *a / *b;
-	*b = temp % *b;
+	c = *a / *b;
+	d = *a % *b;
+	*a = c;
+	*b = d;
 }
 
-
-int	main(void)
+int main ()
 {
-	int	a;
-	int	b;
+	int a;
+	int b;
 
-	a = 10;
-	b = 3;
-	printf("%d, %d\n", a, b);
+	a = 40;
+	b = 0;
+
 	ft_ultimate_div_mod(&a, &b);
-	printf("%d, %d\n", a, b);
-	return (0);
+	write(1 , "a = ", 4);
+	ft_putnbr(a);
+	write(1 , "\n", 1);
+	write(1 , "b = ", 4);  
+	ft_putnbr(b);
 }
-

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ygunay <ygunay@student.s19.be>             +#+  +:+       +#+        */
+/*   By: hbourgeo <hbourgeo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/09 21:49:04 by ygunay            #+#    #+#             */
-/*   Updated: 2021/09/09 21:49:37 by ygunay           ###   ########.fr       */
+/*   Created: 2021/09/11 16:25:17 by hbourgeo          #+#    #+#             */
+/*   Updated: 2021/09/11 16:25:17 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <unistd.h> 
 
 void	ft_putchar(char c)
 {
@@ -19,20 +19,16 @@ void	ft_putchar(char c)
 
 void	ft_putstr(char *str)
 {
-	int	a;
-
-	a = 0;
-	 while (str[a])
+	while (*str != '\0')
 	{
-		ft_putchar(str[a]);
-		a++;
+		ft_putchar(*str);
+		str++;
 	}
 }
 
-
-int	main(void)
+int	main()
 {
-	ft_putstr("hello\n");
-	return (0);
-}
+	char	array[] = "saliydut!";
 
+	ft_putstr(array);
+}

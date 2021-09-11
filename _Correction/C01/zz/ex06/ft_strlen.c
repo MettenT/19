@@ -3,32 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ygunay <ygunay@student.s19.be>             +#+  +:+       +#+        */
+/*   By: hbourgeo <hbourgeo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/10 05:59:53 by ygunay            #+#    #+#             */
-/*   Updated: 2021/09/10 06:00:09 by ygunay           ###   ########.fr       */
+/*   Created: 2021/09/11 16:25:05 by hbourgeo          #+#    #+#             */
+/*   Updated: 2021/09/11 16:25:05 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h> 
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
 int	ft_strlen(char *str)
 {
-	int	i;
+	int	cp;
 
-	i = 0;
-	while (str[i] != '\0')
+	cp = 0;
+	while (*str != '\0')
 	{
-		i++;
+		cp++;
+		str++;
 	}
-	return(i);
+	return (cp);
 }
 
-int		main (void)
+int main ()
 {
-	char str[] = "Testing";
-
-	int count = ft_strlen(str);
-	
-	printf("%d\n", count);
+	int cp;
+	char	array[] = "salrrrut!";
+	cp = ft_strlen(array);
+	ft_putchar(cp+'0');
 }

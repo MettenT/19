@@ -3,44 +3,63 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ygunay <ygunay@student.s19.be>             +#+  +:+       +#+        */
+/*   By: hbourgeo <hbourgeo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/10 09:08:00 by ygunay            #+#    #+#             */
-/*   Updated: 2021/09/10 09:08:13 by ygunay           ###   ########.fr       */
+/*   Created: 2021/09/11 16:24:42 by hbourgeo          #+#    #+#             */
+/*   Updated: 2021/09/11 16:24:42 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_swap(int *a, int *b)
+{
+	int	c;
+
+	c = *a;
+	*a = *b;
+	*b = c;
+}
 
 void	ft_sort_int_tab(int *tab, int size)
 {
-	int	tmp;
-	int	count;
+	int	i;
+	int	j;
 
-	count = 0;
-	while (count < (size - 1))
+	i = 0;
+	while (i < size)
 	{
-		if (tab[count] > tab[count + 1])
+		j = 0;
+		while (j < size - i - 1)
 		{
-			tmp = tab[count];
-			tab[count] = tab[count + 1];
-			tab[count + 1] = tmp;
-			count = 0;
+			if (tab[j] > tab[j + 1])
+			{
+				ft_swap(&tab[j], &tab[j + 1]);
+			}
+			j++;
 		}
-		else
-			count ++;
+		i++;
 	}
 }
 
-
-int        main(void)
+int main ()
 {
-    int tab[9] = {30,5,2,3,4,1,16,20,24};
-    ft_sort_int_tab(tab, 9);
-    for(int i = 0; i < 9; i++)
-    {
-        printf("%d ", tab[i]);
-    }
+	int	size;
+	int i;
+	int tab[5] = {5,2,1,7,6};
+
+	size = 5;
+	i = 0;
+
+	ft_sort_int_tab(tab, size);
+	while (size-- != 0)
+	{
+		ft_putchar(tab[i] + '0');
+		i++;
+	}
 }
-
-
