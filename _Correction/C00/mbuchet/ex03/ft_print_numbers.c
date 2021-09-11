@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmetten <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mbuchet <mbuchet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/06 07:12:59 by tmetten           #+#    #+#             */
-/*   Updated: 2021/09/06 07:13:03 by tmetten          ###   ########.fr       */
+/*   Created: 2021/09/11 17:32:46 by mbuchet           #+#    #+#             */
+/*   Updated: 2021/09/11 17:33:16 by mbuchet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_putchar(char c)
+void	ft_print_numbers(void)
 {
-	write(1, &c, 1);
+	write(1, "123456789", 10);
 }
 
-void	ft_print_alphabet(void)
-{
-	char	a;
-
-	a = 'a';
-	while (a <= 'z')
-	{
-		ft_putchar(a);
-		a++;
-	}
-}
-
-int	main(void)
-{
-	ft_print_alphabet();
-	return (0);
-}
+// int	main(void)
+// {
+// 	ft_print_numbers();
+// 	return (0);
+// }

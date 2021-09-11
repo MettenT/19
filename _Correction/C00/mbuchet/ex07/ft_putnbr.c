@@ -1,36 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmetten <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mbuchet <mbuchet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/06 07:12:59 by tmetten           #+#    #+#             */
-/*   Updated: 2021/09/06 07:13:03 by tmetten          ###   ########.fr       */
+/*   Created: 2021/09/11 17:30:01 by mbuchet           #+#    #+#             */
+/*   Updated: 2021/09/11 17:31:10 by mbuchet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void	ft_print_alphabet(void)
+void	ft_putnbr(int nb)
 {
-	char	a;
-
-	a = 'a';
-	while (a <= 'z')
+	if (nb < 0)
 	{
-		ft_putchar(a);
-		a++;
+		nb = -nb;
+		ft_putchar(nb);
+	}
+	else if (nb > 0 && nb <= 9 || nb == 0)
+	{
+		ft_putchar(nb);
+	}
+	else
+	{
+		ft_putnbr(nb / 10);
+		nb = nb % 10;
+		ft_putchar(nb);
 	}
 }
 
-int	main(void)
-{
-	ft_print_alphabet();
-	return (0);
-}
+// int	main(void)
+// {
+// 	ft_putnbr(42);
+// 	return (0);
+// }

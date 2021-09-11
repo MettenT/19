@@ -31,7 +31,8 @@ char	*ft_strcapitalize(char *str)
 			str[i] += 32;
 			j++;
 		}
-		else if (str[i] < '0' || ('9' < str[i] && str[i] < 'A') || ('Z' < str[i] && str[i] < 'a') || 'z' < str[i] )
+		else if (str[i] < '0' || ('9' < str[i] && str[i] < 'A') 
+					|| ('Z' < str[i] && str[i] < 'a') || 'z' < str[i] )
 		{
 			j = 0;
 		}

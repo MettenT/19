@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmetten <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mbuchet <mbuchet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/06 07:12:59 by tmetten           #+#    #+#             */
-/*   Updated: 2021/09/06 07:13:03 by tmetten          ###   ########.fr       */
+/*   Created: 2021/09/11 17:33:07 by mbuchet           #+#    #+#             */
+/*   Updated: 2021/09/11 17:33:35 by mbuchet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_putchar(char c)
+void	ft_print_reverse_alphabet(void)
 {
-	write(1, &c, 1);
-}
+	char	ch;
 
-void	ft_print_alphabet(void)
-{
-	char	a;
-
-	a = 'a';
-	while (a <= 'z')
+	ch = 'z';
+	while (ch >= 'a')
 	{
-		ft_putchar(a);
-		a++;
+		write(1, &ch, 1);
+		ch--;
 	}
 }
 
-int	main(void)
-{
-	ft_print_alphabet();
-	return (0);
-}
+// int	main(void)
+// {
+// 	ft_print_reverse_alphabet();
+// 	return (0);
+// }
