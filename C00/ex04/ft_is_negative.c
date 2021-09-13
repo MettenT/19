@@ -23,3 +23,8 @@ void	ft_is_negative(int i)
 		write(1, "N", 1);
 	}
 }
+
+// int main()
+// {
+// 	ft_is_negative(-5);
+// }

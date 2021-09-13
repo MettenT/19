@@ -28,3 +28,8 @@ void	ft_print_reverse_alphabet(void)
 		a--;
 	}
 }
+
+// int main() 
+// {
+// 	ft_print_reverse_alphabet();
+// };
