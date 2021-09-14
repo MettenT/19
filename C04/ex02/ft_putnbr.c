@@ -1,34 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmetten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/07 14:39:38 by tmetten           #+#    #+#             */
-/*   Updated: 2021/09/07 14:39:39 by tmetten          ###   ########.fr       */
+/*   Created: 2021/09/06 12:06:11 by tmetten           #+#    #+#             */
+/*   Updated: 2021/09/06 12:06:12 by tmetten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_strlen(char *str)
+void	ft_putchar(char a)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+	write(1, &a, 1);
 }
 
-// int		main (void)
-// {
-// 	char str[] = "Testing";
+void	ft_putnbr(int nb)
+{
+	if (nb == -2147483648)
+	{
+		ft_putchar('-');
+		ft_putchar('2');
+		nb = 147483648;
+	}
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		nb *= -1;
+	}	
+	if (nb < 10)
+	{
+		ft_putchar(nb + 48);
+		return ;
+	}
+	else
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+}
 
-// 	int count = ft_strlen(str);
-	
-// 	printf("%d\n", count);
+// int main()
+// {
+// 	ft_putnbr(-2147483648);
 // }

@@ -28,7 +28,7 @@ void	ft_putstr(char *str)
 
 int		main(void)
 {
-	char str[] = "Test";
+	char str[] = "Testing";
 	char *p_str;
 
 	p_str = str;

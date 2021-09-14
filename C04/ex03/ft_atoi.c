@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmetten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/07 14:39:38 by tmetten           #+#    #+#             */
-/*   Updated: 2021/09/07 14:39:39 by tmetten          ###   ########.fr       */
+/*   Created: 2021/09/14 10:44:21 by tmetten           #+#    #+#             */
+/*   Updated: 2021/09/14 10:44:23 by tmetten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_strlen(char *str)
+void ft_putchar(char a)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+	write(1, &a, 1);
 }
 
-// int		main (void)
-// {
-// 	char str[] = "Testing";
+int ft_atoi(char *str)
+{
+	int i:
+	int Neg;
 
-// 	int count = ft_strlen(str);
-	
-// 	printf("%d\n", count);
-// }
+	in = 0;
+	Neg = 1;
+	if (str[i] != '\0')
+	{
+		while (str[i] == ' ' && str[i] == '\f' && str[i] == '\n' && str[i] == '\r' && str[i] == '\t' && str[i] == '\v')
+		{
+			i++;
+		}
+	}
+}
+
