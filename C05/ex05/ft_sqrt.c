@@ -24,11 +24,7 @@ int ft_sqrt(int nb)
 		{
 			i++;
 		}
-		if (i * i > nb)
-		{
-			return(0);
-		}
-		else if (i * i == nb)
+		if (i * i == nb)
 		{
 			return(i);
 		}
@@ -47,6 +43,6 @@ int		main(void)
 	printf(" 4 = %d (2)\n", ft_sqrt(4));
 	printf(" 9 = %d (3)\n", ft_sqrt(9));
 	printf(" 16 = %d (4)\n", ft_sqrt(16));
-	printf(" 25 = %d (5)\n", ft_sqrt(16));
+	printf(" 25 = %d (5)\n", ft_sqrt(25));
 	
 }
