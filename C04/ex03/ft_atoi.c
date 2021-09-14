@@ -11,25 +11,37 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-void ft_putchar(char a)
+int	ft_atoi(char *str)
 {
-	write(1, &a, 1);
-}
+	int	i;
+	int	neg;
+	int	result;
 
-int ft_atoi(char *str)
-{
-	int i:
-	int Neg;
-
-	in = 0;
-	Neg = 1;
-	if (str[i] != '\0')
+	i = 0;
+	neg = 1;
+	result = 0;
+	while (str[i] == ' ' || str[i] == '\f' || str[i] == '\n'
+		|| str[i] == '\r' || str[i] == '\t' || str[i] == '\v')
 	{
-		while (str[i] == ' ' && str[i] == '\f' && str[i] == '\n' && str[i] == '\r' && str[i] == '\t' && str[i] == '\v')
-		{
-			i++;
-		}
+		i++;
 	}
+	while (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			neg *= -1;
+		i++;
+	}
+	while ('0' <= str[i] && str[i] <= '9')
+	{
+		result = str[i] - 48 + result * 10;
+		i++;
+	}		
+	return (result * neg);
 }
 
+// int	main(void)
+// {
+// 	printf("%d\n", ft_atoi("      	----+-+2147--+-ab567"));
+// }
