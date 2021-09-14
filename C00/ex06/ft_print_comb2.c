@@ -19,7 +19,14 @@ void	ft_putint(int a, int b, int c, int d)
 	write(1, " ", 1);
 	write(1, &c, 1);
 	write(1, &d, 1);
-	write(1, ",", 1);
+	if (a == 57 && b == 56 && c == 57 && d == 57)
+	{		
+	}
+	else
+	{
+		write(1, ",", 1);
+		write(1, " ", 1);
+	}
 }
 
 void	ft_mod(int e, int f)

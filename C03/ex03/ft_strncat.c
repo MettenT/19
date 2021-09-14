@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-// #include <stdio.h>
+#include <stdio.h>
 
 char *ft_strncat(char *dest, char *src, unsigned int nb)
 {
@@ -35,15 +35,15 @@ char *ft_strncat(char *dest, char *src, unsigned int nb)
 	return(dest);
 }
 
-// int		main(void)
-// {
-// 	char dest[] = "123";
-// 	char src[] = "4567890";
-// 	unsigned int nb = 3;
+int		main(void)
+{
+	char dest[] = "123";
+	char src[] = "4567890";
+	unsigned int nb = 3;
 
-// 	printf("-----\ndest = %s\nsrc = %s\nnb = %d\n", dest, src, nb);
-// 	ft_strncat(dest, src, nb);
-// 	printf("result = %s\n-----\n", dest);
+	printf("-----\ndest = %s\nsrc = %s\nnb = %d\n", dest, src, nb);
+	ft_strncat(dest, src, nb);
+	printf("result = %s\n-----\n", dest);
 
-// 	return (0);
-// }
+	return (0);
+}
