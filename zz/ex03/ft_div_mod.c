@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmetten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/08 10:51:39 by tmetten           #+#    #+#             */
-/*   Updated: 2021/09/08 10:51:40 by tmetten          ###   ########.fr       */
+/*   Created: 2021/09/07 14:10:57 by tmetten           #+#    #+#             */
+/*   Updated: 2021/09/07 14:11:00 by tmetten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void	ft_sort_int_tab(int *tab, int size)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	int swap;
-	int i;
-	int n;
-	int j;
-
-	i = 0;
-	n = size -1;
-	while (i <= n)
+	if (b != 0)
 	{
-		j = i + 1;
-		if (tab[i] > tab[j] && tab[j] != '\0') 
-		{
-			swap = tab[i];
-			tab[i] = tab[j];
-			tab[j] = swap;
-			ft_sort_int_tab(tab, size);
-		}
-	i++;
+		*div = a / b;
+		*mod = a % b;
 	}
 }
+
+// #include <stdio.h>
+// int		main(void)
+// {
+// 	int a  = 5;
+// 	int b  = 2;
+// 	int *div = &a;
+// 	int *mod = &b;
+
+// 	ft_div_mod(a, b, div, mod);
+
+// 	printf("Value of a is : %d",*div);
+// 	printf("\nValue of b is : %d",*mod);
+// }
