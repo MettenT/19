@@ -10,20 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-// #include <stdio.h>
-
-char *ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
-	int count;
-	int i;	
+	int	count;
+	int	i;	
 
-	count = 0;	
+	count = 0;
 	while (dest[count] != '\0')
 	{
 		count++;
 	}
-
 	i = 0;
 	while (src[i] != '\0')
 	{
@@ -32,9 +28,11 @@ char *ft_strcat(char *dest, char *src)
 		i++;
 	}
 	dest[count] = '\0';
-	return(dest);
+	return (dest);
 }
 
+// #include <unistd.h>
+// #include <stdio.h>
 // int		main(void)
 // {
 // 	char dest[] = "Hello";
@@ -46,3 +44,17 @@ char *ft_strcat(char *dest, char *src)
 
 // 	return (0);
 // }
+
+// DESCRIPTION
+// 	The  strcat()  function  appends  the  src  string to 
+// 	the dest string, overwriting the terminating null byte 
+// 	('\0') at the end of dest, and then adds a terminating 
+// 	null byte. The strings may not overlap, and the dest 
+// 	string must have enough space for the result.  If dest 
+// 	is not large enough, program behavior is unpredictable; 
+// 	buffer overruns are a favorite avenue for attacking 
+// 	secure programs.
+
+// RETURN VALUE
+// 	The strcat() and strncat() functions return a pointer 
+// 	to the resulting string dest.
