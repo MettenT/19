@@ -10,12 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>	
-
 char	*ft_strcapitalize(char *str)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -31,17 +29,28 @@ char	*ft_strcapitalize(char *str)
 			str[i] += 32;
 			j++;
 		}
-		else if (str[i] < '0' || ('9' < str[i] && str[i] < 'A') 
-					|| ('Z' < str[i] && str[i] < 'a') || 'z' < str[i] )
-		{
+		else if (str[i] < '0' || ('9' < str[i] && str[i] < 'A')
+			|| ('Z' < str[i] && str[i] < 'a') || 'z' < str[i])
 			j = 0;
-		}
 		else
-		{
 			j++;
-		}
-		i++;		
+		i++;
 	}
-	return(str);
+	return (str);
 }
 
+// #include <stdio.h>
+// int		main(void)
+// {	
+// 	char str1[] = "salut, comment tu vas ?";
+
+// 	char str2[] = " 42mots quarante-deux; cinquante+et+un";
+
+// 	char empty[] = "";
+
+// 	printf("\n-----\nBEF = %s", str1);
+// 	printf("\nAFT = %s\n", ft_strcapitalize(str1));
+// 	printf("\nBEF = %s", str2);
+// 	printf("\nAFt = %s\n", ft_strcapitalize(str2));
+// 	printf("\nEmpty = %s\n-----\n", ft_strcapitalize(empty));
+// }

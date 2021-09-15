@@ -19,13 +19,12 @@ void	ft_putchar(char c)
 
 void	ft_printhex(unsigned char c)
 {
-	char *hex;
-	
+	char	*hex;
+
 	hex = "0123456789abcdef";
 	ft_putchar('\\');
 	ft_putchar(hex[c / 16]);
 	ft_putchar(hex[c % 16]);
-	
 }
 
 void	ft_putstr_non_printable(char *str)
@@ -47,10 +46,10 @@ void	ft_putstr_non_printable(char *str)
 	}
 }
 
-int		main(void)
-{
-	char	*string;
+// int		main(void)
+// {
+// 	char	*string;
 
-	string = "Coucou\a tu vas bien ?";
-	ft_putstr_non_printable(string);
-}
+// 	string = "Coucou\a tu vas bien ?";
+// 	ft_putstr_non_printable(string);
+// }

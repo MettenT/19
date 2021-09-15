@@ -10,11 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 char	*ft_strlowcase(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -22,8 +20,30 @@ char	*ft_strlowcase(char *str)
 		if ('A' <= str[i] && str[i] <= 'Z')
 		{
 			str[i] += 32;
-			i++;
 		}
+		i++;
 	}
-	return(str);
+	return (str);
 }
+
+// #include <stdio.h>
+// int		main(void)
+// {
+// 	char uppercase[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// 	char *upr;
+// 	upr = uppercase;
+
+// 	char allcases[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// 	char *p_all;
+// 	p_all = allcases;
+
+// 	char empty[] = "";
+// 	char *p_emp;
+// 	p_emp = empty;
+
+// 	printf("\n-----\n%s = ", uppercase);
+// 	printf("%s\n", ft_strlowcase(upr));
+// 	printf("%s = ", allcases);
+// 	printf("%s\n", ft_strlowcase(p_all));
+// 	printf("Empty = %s\n-----\n", ft_strlowcase(p_emp));
+// }

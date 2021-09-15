@@ -10,11 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 int	ft_str_is_printable(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -25,30 +23,32 @@ int	ft_str_is_printable(char *str)
 		}
 		else
 		{
-			return(0);
-		}		
+			return (0);
+		}
 	}
-	return(1);
+	return (1);
 }
 
-int		main(void)
-{
-	char string[] = "Normal characters string";
-	char *p_str;
-	p_str = string;
+// #include <stdio.h>
+// int		main(void)
+// {
+// 	char string[] = "Normal characters string";
+// 	char *p_str;
+// 	p_str = string;
 
-	char unpr[] = "Unprintables: \t (tab), \a (?)";
-	char *p_unp;
-	p_unp = unpr;
+// 	char unpr[] = "Unprintables: \t (tab), \a (?)";
+// 	char *p_unp;
+// 	p_unp = unpr;
 
-	char empty[] = "";
-	char *p_emp;
-	p_emp = empty;
+// 	char empty[] = "";
+// 	char *p_emp;
+// 	p_emp = empty;
 
-	printf("-----\n1 = Contains only printable characters\n0 = Contains unprintable characters\n\n");
-	printf("%s = %d\n", string, ft_str_is_printable(p_str));
-	printf("%s = %d\n", unpr, ft_str_is_printable(p_unp));
-	printf("Empty = %d\n-----\n", ft_str_is_printable(p_emp));
+// 	printf("-----\n1 = Contains only printable characters");
+// 	printf("\n0 = Contains unprintable characters\n\n");
+// 	printf("%s = %d\n", string, ft_str_is_printable(p_str));
+// 	printf("%s = %d\n", unpr, ft_str_is_printable(p_unp));
+// 	printf("Empty = %d\n-----\n", ft_str_is_printable(p_emp));
 
-	return (0);
-}
+// 	return (0);
+// }
