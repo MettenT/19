@@ -28,34 +28,34 @@ int	ft_invalid(char *base)
 	i = 0;
 	while (base[i] != '\0')
 	{
-		if (base[i] == '+' || base[i] == '-')		
-			return (0);		
+		if (base[i] == '+' || base[i] == '-')
+			return (0);
 		n = 0;
 		while (base[n] != '\0')
 		{
-			if (base[n] == base[i] && i != n)			
-				return (0);			
+			if (base[n] == base[i] && i != n)
+				return (0);
 			n++;
 		}
 		i++;
 	}
-	if (i <= 1)	
-		return (0);	
-	return (1);	
+	if (i <= 1)
+		return (0);
+	return (1);
 }
 
 void	ft_base(int nbr, char *base, int size)
 {
-	unsigned int i;
-	unsigned int n;
-	char result;
+	unsigned int	i;
+	unsigned int	n;
+	char			result;
 
 	if (nbr < 0)
 	{
 		ft_putchar('-');
 		i = nbr * -1;
 	}
-	else 
+	else
 	{
 		i = nbr;
 	}
@@ -69,7 +69,7 @@ void	ft_base(int nbr, char *base, int size)
 
 void	ft_putnbr_base(int nbr, char *base)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (ft_invalid(base) == 1)
@@ -82,24 +82,24 @@ void	ft_putnbr_base(int nbr, char *base)
 	}
 }
 
-int main(void)
-{
-	char base[] = "01";
-	unsigned long c;
+// int main(void)
+// {
+// 	char base[] = "01";
+// 	unsigned long c;
 
-	c = 0;
-	while (c < (sizeof(base) - 1))
-	{
-		ft_putnbr_base(c, base);
-		c++;
-	}
-	c = 0;
-	while (c < (sizeof(base) - 1))
-	{
-		ft_putnbr_base(c, base);
-		c++;
-	}
-	printf("\n");
-	ft_putnbr_base(20, base);
-	printf("\n");
-}
+// 	c = 0;
+// 	while (c < (sizeof(base) - 1))
+// 	{
+// 		ft_putnbr_base(c, base);
+// 		c++;
+// 	}
+// 	c = 0;
+// 	while (c < (sizeof(base) - 1))
+// 	{
+// 		ft_putnbr_base(c, base);
+// 		c++;
+// 	}
+// 	printf("\n");
+// 	ft_putnbr_base(20, base);
+// 	printf("\n");
+// }
