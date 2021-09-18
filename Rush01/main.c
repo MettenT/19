@@ -10,11 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "library.h"
+#include "_h/main.h"
 
 int	main(int argc, char *argv[])
-{
-	ft_print_params(argc, argv);
-	ft_putstr("azerty");
-	return(0);
+{	
+	ft_invalid(argc, argv);
 }

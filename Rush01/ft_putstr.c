@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_putchar.h"
-#include "ft_putstr.h"
+#include "_h/ft_putchar.h"
+#include "_h/ft_putstr.h"
 
 void	ft_putstr(char *str)
 {
