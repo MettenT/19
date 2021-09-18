@@ -1,9 +1,12 @@
-#ifndef LIBRARY_H
-#define LIBRARY_H
+#ifndef MAIN_H
+#define MAIN_H
 
-#include "ft_putchar.h"
-#include "ft_putstr.h"
-#include "ft_print_params.h"
-#include "ft_invalid.h"
+void	ft_putchar(char);
+void	ft_putstr(char*);
+int	ft_invalid(int argc, char *argv[]);
+void	ft_print_params(int, char**);
+// char ft_create_array_input(char *str[]);
+void	ft_print_array(char *str[]);
+char	ft_remove_white_spaces(char *input);
 
 #endif

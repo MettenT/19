@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_create_str_input.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmetten <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/18 12:50:54 by tmetten           #+#    #+#             */
-/*   Updated: 2021/09/18 12:50:55 by tmetten          ###   ########.fr       */
+/*   Created: 2021/09/18 18:09:45 by tmetten           #+#    #+#             */
+/*   Updated: 2021/09/18 18:09:46 by tmetten          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "_h/main.h"
-
-void	ft_putstr(char *str)
+char	*ft_remove_white_spaces(char *str)
 {
-	int	i;
+	int i;
+	int j;
 
 	i = 0;
-	while (str[i] != '\0')
+	j = 0;
+	while (str[i])
 	{
-		ft_putchar(str[i]);
+		if (str[i] != ' ')
+		{
+			str[j] = str[i];
+			j++;
+		}		
 		i++;
 	}
+	str[j] = '\0';
+	return (str);
 }

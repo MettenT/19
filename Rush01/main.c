@@ -13,6 +13,51 @@
 #include "_h/main.h"
 
 int	main(int argc, char *argv[])
-{	
-	ft_invalid(argc, argv);
+{		
+	char *input;	
+
+	if (ft_invalid(argc, argv) == 1)
+	{
+		ft_remove_white_spaces(argv[1]);
+		input = argv[1];
+		ft_putstr(input);
+		
+	}	
+	char ** result;
+	int i;
+	int j;
+	int k;
+
+	i = 0;
+	j = 0:
+	k = 0;
+	while (input[i] != '\0')
+	{
+		j = i / 4;
+		k = i % 4;
+		if (input[i] < 4)
+		{
+			
+		}
+		if (input[i] < 8)
+		{
+			
+		}
+		if (input[i] < 12)
+		{
+			
+		}
+		if (input[i] < 16)
+		{
+			
+		}
+	}
+	return (0);
+
+// top 
+// bot
+// left 
+// right
 }
+
+
