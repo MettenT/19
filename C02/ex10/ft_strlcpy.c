@@ -13,7 +13,13 @@
 unsigned int	ft_strlcpy( char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
+	unsigned int	j;
 
+	j = 0;
+	while (src[j] != '\0')
+	{
+		j++;
+	}
 	i = 0;
 	while (src[i] != '\0' && i < size)
 	{
@@ -21,17 +27,17 @@ unsigned int	ft_strlcpy( char *dest, char *src, unsigned int size)
 		i++;
 	}
 	dest[i] = '\0';
-	return (i);
+	return (j);
 }
 
 // #include <stdio.h>
 // int		main(void)
 // {
 // 	char src[] = "Source";
-// 	char dest[] = "";
+// 	char dest[] = "Car";
 // 	unsigned int n;
 
-// 	n = 50;
+// 	n = 3;
 
 // 	printf("BEFORE\n\tsrc: %s\n\tdes: %s\n\tsize: %d\n", src, dest, n);
 

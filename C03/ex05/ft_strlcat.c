@@ -63,6 +63,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 
 // 	printf("String final: %s, i: %d", str1, Example2);
 
+// 	Example2 = ft_strlcat(str1, str2, 4);
 // }
 
 // DESCRIPTION

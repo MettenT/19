@@ -19,8 +19,8 @@ void	ft_putchar(char a)
 
 int	main(int argc, char *argv[])
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 1;
 	if (argc > 1)
@@ -37,5 +37,5 @@ int	main(int argc, char *argv[])
 			i++;
 		}
 	}
-	return(0);
+	return (0);
 }

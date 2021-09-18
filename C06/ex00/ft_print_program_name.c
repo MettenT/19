@@ -17,9 +17,9 @@ void	ft_putchar(char a)
 	write(1, &a, 1);
 }
 
-int main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (argc > 0)
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 			ft_putchar(argv[0][i]);
 			i++;
 		}
-	}	
+	}
 	ft_putchar('\n');
-	return(0);
+	return (0);
 }

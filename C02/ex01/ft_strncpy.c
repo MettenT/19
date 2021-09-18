@@ -13,18 +13,20 @@
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int	i;
-	unsigned int	j;
 
 	i = 0;
 	while (i < n)
 	{
-		j = i + 1;
-		if (src[i] == '\0')
+		if (src[i] != '\0')
 		{
-			src[j] = src[i];
+			dest[i] = src[i];
+			i++;
 		}
-		dest[i] = src[i];
-		i++;
+		else
+		{
+			dest[i] = '\0';
+			i++;
+		}
 	}
 	return (dest);
 }
@@ -36,7 +38,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 // 	char dest[] = "Destination string.";
 // 	unsigned int n;
 
-// 	n = 5;
+// 	n = 3;
 
 // 	printf("BEFORE\n\tsrc: %s\n\tdes: %s\n", src, dest);
 
