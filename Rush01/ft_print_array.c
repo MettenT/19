@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "_h/main.h"
+#include "main.h"
 
-void	ft_print_array(char *str[])
+void	ft_print_array(int *nbr[])
 {
-	int row;
-	int column;
+	int	row;
+	int	column;
 
 	row = 0;
 	column = 0;
@@ -23,10 +23,15 @@ void	ft_print_array(char *str[])
 	{
 		while (column < 4)
 		{
-			ft_putchar(str[row][column]);
+			ft_putchar(nbr[row][column] + 48);
+			if (column != 3)
+			{
+				ft_putchar(' ');
+			}
 			column++;
 		}
 		ft_putchar('\n');
+		column = 0;
 		row++;
 	}
 }

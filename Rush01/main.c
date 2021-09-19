@@ -10,54 +10,48 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "_h/main.h"
+#include "main.h"
 
 int	main(int argc, char *argv[])
 {		
-	char *input;	
+	char	*input;
+	int		**result;	
+	int		i;
 
 	if (ft_invalid(argc, argv) == 1)
 	{
 		ft_remove_white_spaces(argv[1]);
 		input = argv[1];
-		ft_putstr(input);
-		
-	}	
-	char ** result;
-	int i;
-	int j;
-	int k;
-
-	i = 0;
-	j = 0:
-	k = 0;
-	while (input[i] != '\0')
-	{
-		j = i / 4;
-		k = i % 4;
-		if (input[i] < 4)
+		result = malloc(sizeof(int) * 16);
+		i = 0;
+		while (i < 16)
 		{
-			
+			result[i] = malloc(sizeof(int) * 16);
+			i++;
 		}
-		if (input[i] < 8)
-		{
-			
-		}
-		if (input[i] < 12)
-		{
-			
-		}
-		if (input[i] < 16)
-		{
-			
-		}
+		ft_initialize_array(result);
+		ft_print_array(result);
 	}
-	return (0);
-
-// top 
-// bot
-// left 
-// right
+	else
+		return (0);
 }
 
+// int **ft_create_matrix(void)
+// {
+// 	g_result = malloc(sizeof(int) * 16);
+// 	if (!g_result)
+// 	{
+// 		ft_putstr("Error\n");
+// 		return (0);
+// 	}
 
+// 	int i;
+// 	i = 0;
+//     while (i < 16)
+//     {
+//         g_result[i] = malloc(sizeof(int)*16);
+//         i++;
+//     } 
+// 	ft_initialize_array(g_result);
+// 	return (g_result);
+// }
