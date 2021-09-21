@@ -13,8 +13,6 @@
 #include <unistd.h>
 #include <stdio.h>
 
-#include <unistd.h>
-
 void	ft_putchar(char a)
 {
 	write(1, &a, 1);
@@ -44,10 +42,9 @@ int	ft_invalid(char *base)
 	return (1);
 }
 
-void	ft_base(int nbr, char *base, int size)
+void	ft_base(int nbr, char *base, unsigned int size)
 {
 	unsigned int	i;
-	unsigned int	n;
 	char			result;
 
 	if (nbr < 0)
@@ -102,4 +99,10 @@ void	ft_putnbr_base(int nbr, char *base)
 // 	printf("\n");
 // 	ft_putnbr_base(20, base);
 // 	printf("\n");
+// }
+
+// int main (void)
+// {
+//     ft_putnbr_base(-123456, "alo");
+//         return (0);
 // }
