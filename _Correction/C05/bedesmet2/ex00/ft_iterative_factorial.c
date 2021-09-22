@@ -3,41 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmetten <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: bedesmet <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/14 16:38:58 by tmetten           #+#    #+#             */
-/*   Updated: 2021/09/14 16:38:59 by tmetten          ###   ########.fr       */
+/*   Created: 2021/09/14 11:28:05 by bedesmet          #+#    #+#             */
+/*   Updated: 2021/09/14 11:28:07 by bedesmet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_iterative_factorial(int nb)
 {
-	int	result;
+	int	res;
 
-	result = 1;
-	if (nb < 0)
-	{
-		return (0);
-	}
+	res = 1;
 	if (nb == 0)
-	{
 		return (1);
-	}
+	if (nb < 0)
+		return (0);
 	while (nb > 1)
 	{
-		result *= nb--;
+		res = res * nb;
+		nb--;
 	}
-	return (result);
+	return (res);
 }
 
-// #include <unistd.h>
 // #include <stdio.h>
-// int		main(void)
+// int main()
 // {
-// 	printf("-6 = %d (0)\n", ft_iterative_factorial(-6));
-// 	printf(" 0 = %d (1)\n", ft_iterative_factorial(0));
-// 	printf(" 1 = %d (1)\n", ft_iterative_factorial(1));
-// 	printf(" 2 = %d (2)\n", ft_iterative_factorial(2));
-// 	printf(" 3 = %d (6)\n", ft_iterative_factorial(3));
-// 	printf(" 4 = %d (24)\n", ft_iterative_factorial(4));
+// 	printf("%d\n", ft_iterative_factorial(25));
 // }

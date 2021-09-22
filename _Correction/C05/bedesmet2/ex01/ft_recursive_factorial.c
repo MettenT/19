@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmetten <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: bedesmet <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/21 19:52:38 by tmetten           #+#    #+#             */
-/*   Updated: 2021/09/21 19:52:39 by tmetten          ###   ########.fr       */
+/*   Created: 2021/09/14 11:28:29 by bedesmet          #+#    #+#             */
+/*   Updated: 2021/09/14 11:28:31 by bedesmet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ABS_H
-# define FT_ABS_H
+int	ft_recursive_factorial(int nb)
+{
+	if (nb < 0)
+		return (0);
+	if (nb == 0)
+		return (1);
+	return (nb * ft_recursive_factorial(nb - 1));
+}
 
-# define ABS(nbr) (nbr < 0) ? -nbr : nbr
-
-#endif
+// #include <stdio.h>
+//int main()
+//{
+//	printf("%d\n", ft_recursive_factorial(0));
+//}

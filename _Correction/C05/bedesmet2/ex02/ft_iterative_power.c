@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ten_queens_puzzle.c                             :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmetten <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: bedesmet <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/14 19:49:48 by tmetten           #+#    #+#             */
-/*   Updated: 2021/09/14 19:49:49 by tmetten          ###   ########.fr       */
+/*   Created: 2021/09/14 11:28:46 by bedesmet          #+#    #+#             */
+/*   Updated: 2021/09/14 11:28:48 by bedesmet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int ft_free_place()
+int	ft_iterative_power(int nb, int power)
 {
-	
-}
+	int	r;
+	int	c;
 
-int ft_ten_queens_puzzle(void)
-{
-	int board[10][];
-	int c;
-	int r;
-	int n;
-
-	n = 0;
 	c = 0;
-	r = 0;
-	board[0][0] = 0;
-	while (c <= 9)
+	r = 1;
+	if (power < 0)
+		return (0);
+	while (c < power)
 	{
-		board[c][r] = n;
+		r = r * nb;
 		c++;
 	}
+	return (r);
 }
+
+// #include <stdio.h>
+//int main(void)
+//{
+//	printf("%d\n", ft_iterative_power(6, 2));
+//}

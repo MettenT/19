@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmetten <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/21 19:52:38 by tmetten           #+#    #+#             */
-/*   Updated: 2021/09/21 19:52:39 by tmetten          ###   ########.fr       */
+/*   Created: 2021/09/13 09:31:38 by cbukuba           #+#    #+#             */
+/*   Updated: 2021/09/13 09:31:52 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ABS_H
-# define FT_ABS_H
+#include <unistd.h>
 
-# define ABS(nbr) (nbr < 0) ? -nbr : nbr
+void	ft_putstr(char *str)
+{
+	int	c;
 
-#endif
+	c = 0;
+	while (str[c] != '\0')
+	{
+		write(1, &str[c], 1);
+		c ++;
+	}
+}
+
+int main()
+{
+	char str []={"sgdgfhgjkj"};
+	ft_putstr(str);
+}
