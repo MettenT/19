@@ -66,3 +66,19 @@ int	main(int argc, char *argv[])
 	ft_print_params(argc, argv);
 	return (0);
 }
+
+
+// $> ./nkbgpihwekjd8397vpckrlbf "nTHFk5L" "peV1iU2s8X" "YDgjhZStR" "lxwEHVz" "f3azV9" "8B" "djUOxWCTv" "9hQo" "ePKqY72x" "JzBjrhx" "lqRYL" "ot5ziQ2" "0FWvDl" "U8taoG" "6" "dGLIM"
+// $> diff -U 3 user_output_test7 test7.output | cat -e
+// --- user_output_test7   2021-09-22 19:42:12.000000000 +0000$
+// +++ test7.output        2021-09-22 19:42:12.000000000 +0000$
+// @@ -1,5 +1,5 @@$
+// -6$
+//  0FWvDl$
+// +6$
+//  8B$
+//  9hQo$
+//  JzBjrhx$
+
+// Diff KO :(
+// Grade: 0

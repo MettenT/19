@@ -24,6 +24,10 @@ char	*ft_strdup(char *src)
 		i++;
 	}
 	str = (char *)malloc(sizeof(*str) * (i + 1));
+	if (!str)
+	{
+		return (NULL);
+	}		
 	j = 0;
 	while (j < i)
 	{

@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+// /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
@@ -31,19 +31,19 @@ char	*ft_strcat(char *dest, char *src)
 	return (dest);
 }
 
-// #include <unistd.h>
-// #include <stdio.h>
-// int		main(void)
-// {
-// 	char dest[] = "Hello";
-// 	char src[] = ", world!";
+#include <unistd.h>
+#include <stdio.h>
+int		main(void)
+{
+	char dest[] = "Hello";
+	char src[] = ", world!";
 
-// 	printf("-----\ndest = %s\nsrc = %s\n", dest, src);
-// 	ft_strcat(dest, src);
-// 	printf("result = %s\n-----\n", dest);
+	printf("-----\ndest = %s\nsrc = %s\n", dest, src);
+	ft_strcat(dest, src);
+	printf("result = %s\n-----\n", dest);
 
-// 	return (0);
-// }
+	return (0);
+}
 
 // DESCRIPTION
 // 	The  strcat()  function  appends  the  src  string to 

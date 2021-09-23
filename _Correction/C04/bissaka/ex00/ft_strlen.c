@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_point.h                                         :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmetten <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: bissaka- <bissaka-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/21 20:19:33 by tmetten           #+#    #+#             */
-/*   Updated: 2021/09/21 20:19:35 by tmetten          ###   ########.fr       */
+/*   Created: 2021/09/13 10:31:50 by cbukuba           #+#    #+#             */
+/*   Updated: 2021/09/22 19:26:08 by bissaka-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_POINT_H
-# define FT_POINT_H
-
-typedef struct s_point
+int	ft_strlen(char *str)
 {
-	int	x;
-	int	y;
-}				t_point;
+	int	i;
 
-#endif
+	i = 0;
+	while (str[i] != '\0')
+		i ++;
+	return (i);
+}
+
+#include<stdio.h>
+int main()
+{
+	char str[] = "abcd";
+	int result = ft_strlen(str);
+	printf("%d", result);
+}

@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_point.h                                         :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmetten <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: bissaka- <bissaka-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/21 20:19:33 by tmetten           #+#    #+#             */
-/*   Updated: 2021/09/21 20:19:35 by tmetten          ###   ########.fr       */
+/*   Created: 2021/09/13 09:31:38 by cbukuba           #+#    #+#             */
+/*   Updated: 2021/09/22 19:29:32 by bissaka-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_POINT_H
-# define FT_POINT_H
+#include <unistd.h>
 
-typedef struct s_point
+void	ft_putstr(char *str)
 {
-	int	x;
-	int	y;
-}				t_point;
+	int	i;
 
-#endif
+	i = 0;
+	while (str[i] != '\0')
+	{
+		write(1, &str[i], 1);
+		i ++;
+	}
+}
+
+int main()
+{
+	char str []="issaka hama barhamou alias president bissaka";
+	ft_putstr(str);
+}
