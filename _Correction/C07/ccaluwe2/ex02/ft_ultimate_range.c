@@ -46,16 +46,16 @@ int	ft_ultimate_range(int **range, int min, int max)
 int main()
 {
 	int *range;
-	int len;
+	int length;
 
-	len = ft_ultimate_range(&range, 15, 10);
-	printf("len = %d\n",len);
+	length = ft_ultimate_range(&range, 5, 10);
+	printf("len = %d\n",length);
 	if (!range)
 	{
 		printf("Pointer set to NULL.\n");
 		return (0);
 	}
-	for (int i = 0; i < len; i++)
+	for (int i = 0; i < length; i++)
 	{
 		printf("%d ", range[i]);
 	}
